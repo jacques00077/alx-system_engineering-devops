@@ -1,7 +1,10 @@
-# This is the ssh client system-wide configuration file.
-# This file provides defaults for users, and the values can be changed
-# in per-user configuration files or on the command line.
+# ssh_config
+
 Host *
-        IdentityFile ~/.ssh/school
-        PasswordAuthentication no
-        HostbasedAuthentication no
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    HostName 100.26.10.86
+    User ubuntu
