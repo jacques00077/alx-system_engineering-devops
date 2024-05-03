@@ -1,0 +1,8 @@
+#!/usr/bin/env bash                                                                                                                                       
+# fix nginx listening on port 80                                                                                                                          
+# remove the Nginx configuration file
+rm /etc/nginx/sites-enabled/default
+# Create symbolic link to the deafult file in sites-available                                                                         
+ln -s /etc/nginx/sites-available/default default /etc/nginx/sites-enabled/default                                                                                                         
+# Restart Nginx                                                                                                                                           
+service nginx restart
